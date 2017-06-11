@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">H5APP</string>
+    <string name="app_name">H5微端</string>
+    <string name="gameurl">http://h5.play.quicksdk.net/gameCenter/play?token=zzk4puUOWCH13TXOOb6AuLBs4SKKpctfNpilMgQlbfthzVSOuc2RzFrQqrTb14JXAulLuWVOud86+EudHyYqX27q4HuO5CH3BWfUGwV1xWk=</string>
 </resources>
