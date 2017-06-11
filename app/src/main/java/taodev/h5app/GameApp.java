@@ -10,11 +10,16 @@ import com.tendcloud.appcpa.TalkingDataAppCpa;
  */
 
 public class GameApp extends Application {
+    public static String TALKINGAD_APPID = "";
+    public static String TALKINGAD_CHANNEL = "";
     @Override
     public void onCreate() {
         super.onCreate();
 
-        TalkingDataAppCpa.init(this.getApplicationContext(), "F873A7D9FCB64B068231C417E20CB024", "测试渠道");
+        GameApp.TALKINGAD_APPID = getString(R.string.talkingad_appid);
+        GameApp.TALKINGAD_CHANNEL = getString(R.string.talkingad_channel);
+
+        TalkingDataAppCpa.init(this.getApplicationContext(), GameApp.TALKINGAD_APPID, GameApp.TALKINGAD_CHANNEL);
 
         QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
             @Override
