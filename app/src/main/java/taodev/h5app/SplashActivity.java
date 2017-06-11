@@ -1,17 +1,12 @@
 package taodev.h5app;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 
 /**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
+ * 闪屏页面
  */
 public class SplashActivity extends AppCompatActivity {
     public static boolean SHOW_SPLASH = true;
@@ -33,6 +28,15 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     public void onSplashStop() {
+    }
+
+    // 屏蔽闪屏返回退出
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK) {
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 
     public static void closeSplash() {

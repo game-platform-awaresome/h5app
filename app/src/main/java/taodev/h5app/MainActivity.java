@@ -2,14 +2,16 @@ package taodev.h5app;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.WindowManager;
 
 import taodev.h5app.utils.X5WebView;
 
+/**
+ * 游戏主界面
+ */
 public class MainActivity extends AppCompatActivity {
     public static MainActivity Instance = null;
 
