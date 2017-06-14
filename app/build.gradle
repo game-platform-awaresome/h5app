@@ -1,10 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'h5app'
+            keyPassword 'litaoliu'
+            storeFile file('E:/h5app1.keystore')
+            storePassword 'litaoliu'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
     defaultConfig {
-        applicationId "taodev.h5app"
+        applicationId 'taodev.h5app'
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
@@ -15,6 +25,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
         }
     }
     productFlavors {
